@@ -3,8 +3,10 @@ import time
 from ClearCache import startClear
 from WriteFileLog import writeLog
 
-servicesName = ("ChiffaDriverService", "DriverManager2")
-#servicesName = ("wuauserv", "wscsvc")
+servicesName = ("ChiffaDriverService"
+                , "DriverManager2"
+                , "DriverManager3"
+                , "DriverManager4")
 
 
 # Останавливаем службы

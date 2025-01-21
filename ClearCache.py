@@ -2,8 +2,14 @@ import os
 from WriteFileLog import writeLog
 
 # Пути удаления файлов в папке
-foldersToClear = (r"C:\LIS\Manager\Logs", r"C:\LIS2\Manager\Logs")
-errorFiles = (r"C:\LIS\Manager\error.xml", r"C:\LIS2\Manager\error.xml")
+foldersToClear = (r"C:\LIS\Manager\Logs"
+                  , r"C:\LIS2\Manager\Logs"
+                  , r"C:\LIS3\Manager\Logs"
+                  , r"C:\LIS4\Manager\Logs")
+errorFiles = (r"C:\LIS\Manager\error.xml"
+              , r"C:\LIS2\Manager\error.xml"
+              , r"C:\LIS3\Manager\error.xml"
+              , r"C:\LIS4\Manager\error.xml")
 
 
 def clear_folder(folderPath):
