@@ -1,7 +1,6 @@
 import os
 import time
 
-
 def select() -> int:
     check_one = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
     check_two = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
