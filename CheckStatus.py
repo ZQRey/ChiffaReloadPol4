@@ -11,6 +11,7 @@ def select() -> int:
         return 1
 
 def check_status():
+    time.sleep(60)
     result = select()
     if result == 0:
         return "Ok, services is all run."
