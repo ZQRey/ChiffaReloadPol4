@@ -20,6 +20,3 @@ def check_status():
         return "Ok, services is all run."
     else:
         os.system("shutdown -r -t 30")
-
-if __name__ == "__main__":
-    print(select())
