@@ -1,15 +1,17 @@
 import os
 import time
 
+import ReloadedServices
+
 def select() -> int:
-    check_one = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
-    check_two = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
-    check_tree = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
-    check_four = os.system("powershell -Command Get-Service wuauserv >nul 2>&1")
-    if check_one == 0 and check_two == 0 and check_tree == 0 and check_four == 0:
-        return 0
-    else:
-        return 1
+    services = ReloadedServices.servicesName
+    status = 0
+    for service in services:
+        print(f"Check status {service}")
+        check = os.system(f"powershell -Command Get-Service {service} >nul 2>&1")
+        if check != 0:
+            status = check
+    return status
 
 def check_status():
     time.sleep(60)
@@ -18,3 +20,6 @@ def check_status():
         return "Ok, services is all run."
     else:
         os.system("shutdown -r -t 30")
+
+if __name__ == "__main__":
+    print(select())

@@ -7,9 +7,9 @@ foldersToClear = (r"C:\LIS\Manager\Logs"
                   , r"C:\LIS3\Manager\Logs"
                   , r"C:\LIS4\Manager\Logs")
 errorFiles = (r"C:\LIS\Manager\error.xml"
-              , r"C:\LIS2\Manager\error.xml"
-              , r"C:\LIS3\Manager\error.xml"
-              , r"C:\LIS4\Manager\error.xml")
+              , r"C:\LIS2\Manager\errors.xml"
+              , r"C:\LIS3\Manager\errors.xml"
+              , r"C:\LIS4\Manager\errors.xml")
 
 
 def clear_folder(folderPath):
